@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Comments Downloader</title>
+    <style>
+        body {
+            background-image: url('D:\youtube api\templates\Youtube-Theme-Templates.jpg'); /* Change this to the path of your background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff; /* Adjust text color for better contrast */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            color: #ffcc00; /* Bright color for the heading */
+        }
+        form {
+            max-width: 500px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8); /* More opaque background for better readability */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease-in-out;
+        }
+        label, input, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        input {
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 12px;
+            font-size: 1.2em;
+            background-color: #ffcc00;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #e6b800;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="/download_comments" method="post">
+        <h1>YouTube Comments Downloader</h1>
+        <!-- <label for="channel_name">Channel Name:</label>
+        <input type="text" id="channel_name" name="channel_name" required> -->
+        
+        <label for="video_url">YouTube Video URL:</label>
+        <input type="text" id="video_url" name="video_url" required>
+        
+        <button type="submit">Download Comments</button>
+    </form>
+</body>
+</html>
